@@ -28,7 +28,7 @@
         var rightBtn = document.getElementById("right-btn");
         var index = 0;
         var time = 0;
-        var colors = ["rgb(3, 44, 16)", "rgb(214, 231, 235)", "rgb(4, 4, 53)"];
+        var colors = ["rgb(3, 44, 16)", "rgb(214, 231, 235)", "aliceblue"];
         var logoColors = ["rgb(116, 207, 156)", "rgb(214, 231, 235)", "rgb(4, 4, 53)"];
         var homeColors = ["rgb(255, 255, 255)", "rgb(214, 231, 235)", "rgb(4, 4, 53)"];
         var ScenColors = ["rgb(3, 44, 16)", "rgb(214, 231, 235)", "rgb(4, 4, 53)"];
@@ -155,34 +155,39 @@
     
     </nav>
 
-<script>
-    window.onscroll = function(){
-        var top = document.documentElement.scrollTop || document.body.scrollTop;
-        if(top>100){
-            $('nav').css('background-color', 'white');
-            $('nav').css('border-bottom', '2px solid black');
-            $('.logo a').css('color', 'black');
-            $('.menu-item-home').css('color', 'black');
-            $('.menu-item-scenery').css('color', 'black');
-            $('.menu-item-cuisine').css('color', 'black');
-            $('.sign-in a').css('color', 'black');
-            $('.sign-up a').css('color', 'black');
-            $('.search-box').css('border-color', 'black');
-            $('.sign-up a').css('color', 'black');
+    <script>
+        window.onscroll = function(){
+            var top = document.documentElement.scrollTop || document.body.scrollTop;
+            if(top>100){
+                $('nav').css('background-color', 'white');
+                $('nav').css('border-bottom', '2px solid black');
+                $('.logo a').css('color', 'black');
+                $('.menu-item-home').css('color', 'black');
+                $('.menu-item-scenery').css('color', 'black');
+                $('.menu-item-cuisine').css('color', 'black');
+                $('.sign-in a').css('color', 'black');
+                $('.sign-up a').css('color', 'black');
+                $('.search-box').css('border-color', 'black');
+                $('.sign-up a').css('color', 'black');
+            }
+            else{
+                $('nav').css('background', 'none');
+                $('nav').css('border-bottom', 'none');
+                $('.sign-in a').css('color', 'aliceblue');
+                $('.sign-up a').css('color', 'aliceblue');
+                $('.search-box').css('border-color', 'rgb(235, 221, 196)');
+                GoIndex();
+            }
         }
-        else{
-            $('nav').css('background', 'none');
-            $('nav').css('border-bottom', 'none');
-            $('.sign-in a').css('color', 'aliceblue');
-            $('.sign-up a').css('color', 'aliceblue');
-            $('.search-box').css('border-color', 'rgb(235, 221, 196)');
-            $('.sign-up a').css('color', 'black');
-            GoIndex();
-        }
-    }
-</script>
+    </script>
 
-    <div class="container">
+    <script>
+        document.getElementsByClassName("learn-more-btn")[0].addEventListener('click',function(){
+            document.getElementById("container").scrollIntoView(true);
+        });
+    </script>
+
+    <div id="container">
         <main>
             <div class="about-henan">
                 <h2 class="main-title">关于河南</h2>

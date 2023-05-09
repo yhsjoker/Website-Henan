@@ -24,8 +24,6 @@ header{
     transform: translate(-50%, -50%);
     width: 40vw;
     height: 40vh;
-    backdrop-filter: blur(5px);
-    border-radius: 30px;
 }
 
 .bulletin-board{
@@ -56,6 +54,7 @@ header{
     transition-duration: 0.4ms;
     cursor: pointer;
     border-radius: 64px;
+    backdrop-filter: blur(5px);
 }
 
 .learn-more-btn:hover{
@@ -243,6 +242,8 @@ nav{
     color: rgb(178, 199, 217);
 }
 
-.container{
-    
+#container{
+    height: 300vh;
+    width: 100vw;
+    padding-top: 200px;
 }
