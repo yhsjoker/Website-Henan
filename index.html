@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Yhs_Jokerの文旅小站</title>
+</head>
+<body>
+    <header>
+        <div class="home-wrap">
+            <div class="bulletin-board"><p>在未来豫见</p></div>
+            <button class="learn-more-btn">了解更多</button>
+        </div>
+        <ul class="point-list">
+            <li class="point active" data-index = 0></li>
+            <li class="point" data-index = 1></li>
+            <li class="point" data-index = 2></li>
+        </ul>
+        <button class="bg-img-btn" id="left-btn"> < </button>
+        <button class="bg-img-btn" id="right-btn"> > </button>
+    </header>
+
+    <script>
+        var points = document.querySelectorAll(".point");
+        var leftBtn = document.getElementById("left-btn");
+        var rightBtn = document.getElementById("right-btn");
+        var index = 0;
+        var time = 0;
+        var colors = ["rgb(3, 44, 16)", "rgb(214, 231, 235)", "rgb(4, 4, 53)"];
+        var logoColors = ["rgb(116, 207, 156)", "rgb(214, 231, 235)", "rgb(4, 4, 53)"];
+        var homeColors = ["rgb(255, 255, 255)", "rgb(214, 231, 235)", "rgb(4, 4, 53)"];
+        var ScenColors = ["rgb(3, 44, 16)", "rgb(214, 231, 235)", "rgb(4, 4, 53)"];
+        var CuisColors = ["rgb(3, 44, 16)", "rgb(214, 231, 235)", "rgb(4, 4, 53)"];
+        function Style(el) {
+            if (!el) {
+                console.error('请传入DOM元素！');
+                return false;
+            };
+    
+            this.css = function () {
+                var arg = arguments;
+                var dom = document.querySelector(el);
+
+                if (1 < arg.length) {
+                    //设置行内style样式
+                    dom.style[arg[0]] = arg[1];
+                } else {
+                    //获取非行内style样式
+                    return dom.currentStyle ? dom.currentStyle[arg[0]] : getComputedStyle(dom, null)[arg[0]];
+                };
+            };
+        };
+
+        function $(el) {
+            return new Style(el);
+        };
+
+        var ClearActive = function(){
+            for(i = 0; i < points.length; i++){
+                points[i].className = 'point';
+            }
+        }
+
+        var GoIndex = function(){
+            ClearActive();
+            points[index].className = "point active";
+            $('header').css('background-image', 'url(../images/home-page-' + index + '.jpg)');
+            $('.bulletin-board').css('color', colors[index]);
+            $('.learn-more-btn').css('border', "5px solid " + colors[index]);
+            $('.learn-more-btn').css('color', colors[index]);
+            $('.logo > a').css('color', logoColors[index]);
+            $('.menu-item-home').css('color', homeColors[index]);
+            $('.menu-item-scenery').css('color', ScenColors[index]);
+            $('.menu-item-cuisine').css('color', CuisColors[index]);
+        }
+
+        var GoLeft = function(){
+            if(index == 0){
+                index = 2;
+            }
+            else{
+                index--;
+            }
+            GoIndex();
+        }
+
+        var GoRight = function(){
+            if(index < 2){
+                index++;
+            }
+            else{
+                index = 0;
+            }
+            GoIndex();
+        }
+
+        leftBtn.addEventListener('click', function(){
+            GoLeft();
+            time = 0;
+        })
+
+        rightBtn.addEventListener('click', function(){
+            GoRight();
+            time = 0;
+        })
+
+        for(i=0; i<points.length; i++){
+            points[i].addEventListener('click', function(){
+                var pointIndex = this.getAttribute('data-index');
+                index = pointIndex;
+                GoIndex();
+                time = 0;
+            })
+        }
+
+        var timer;
+        function play(){
+            timer = setInterval(()=>{
+                time++;
+                if(time == 20){
+                    GoRight();
+                    time = 0;
+                }
+            }, 500)
+        }
+
+        play();
+    </script>
+
+    <nav>
+        <div class="logo"><a href="#"><span>Yhs_Joker</span>&nbsp;の&nbsp文旅小站</a></div>
+        
+        <ul  class="menu">
+            <li class="menu-item"><a href="#" class="menu-item-home">首页</a></li>
+            <li class="menu-item"><a href="#" class="menu-item-scenery">豫州风光</a></li>
+            <li class="menu-item"><a href="#" class="menu-item-cuisine">中原美食</a></li>
+        </ul>
+
+        <div class="search-box">
+            <form>
+                <input type="text" id="value">
+                <button type="submit" class="search">
+                    <span>
+                        <svg t="1653482794231" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2340" width="16" height="16"><path d="M446.112323 177.545051c137.567677 0.219798 252.612525 104.59798 266.162424 241.493333 13.562828 136.895354-78.778182 261.818182-213.617777 289.008485-134.852525 27.203232-268.386263-52.156768-308.945455-183.608889s25.018182-272.252121 151.738182-325.779394A267.235556 267.235556 0 0 1 446.112323 177.545051m0-62.060607c-182.794343 0-330.989899 148.195556-330.989899 330.989899s148.195556 330.989899 330.989899 330.989899 330.989899-148.195556 330.989899-330.989899-148.195556-330.989899-330.989899-330.989899z m431.321212 793.341415a30.849293 30.849293 0 0 1-21.94101-9.102223l-157.220202-157.220202c-11.752727-12.179394-11.584646-31.534545 0.37495-43.50707 11.972525-11.972525 31.327677-12.140606 43.494141-0.37495l157.220202 157.220202a31.036768 31.036768 0 0 1 6.723232 33.810101 31.004444 31.004444 0 0 1-28.651313 19.174142z m0 0" p-id="2341" fill="#ffffff"></path></svg>
+                    </span>
+                </button>
+            </form>
+        </div>
+
+        <div class="sign-in"><a href="#">登录</a></div>
+        
+        <div class="sign-up"><a href="#">注册</a></div>
+    
+    </nav>
+
+<script>
+    window.onscroll = function(){
+        var top = document.documentElement.scrollTop || document.body.scrollTop;
+        if(top>100){
+            $('nav').css('background-color', 'white');
+            $('nav').css('border-bottom', '2px solid black');
+            $('.logo a').css('color', 'black');
+            $('.menu-item-home').css('color', 'black');
+            $('.menu-item-scenery').css('color', 'black');
+            $('.menu-item-cuisine').css('color', 'black');
+            $('.sign-in a').css('color', 'black');
+            $('.sign-up a').css('color', 'black');
+            $('.search-box').css('border-color', 'black');
+            $('.sign-up a').css('color', 'black');
+        }
+        else{
+            $('nav').css('background', 'none');
+            $('nav').css('border-bottom', 'none');
+            $('.sign-in a').css('color', 'aliceblue');
+            $('.sign-up a').css('color', 'aliceblue');
+            $('.search-box').css('border-color', 'rgb(235, 221, 196)');
+            $('.sign-up a').css('color', 'black');
+            GoIndex();
+        }
+    }
+</script>
+
+    <div class="container">
+        <main>
+            <div class="about-henan">
+                <h2 class="main-title">关于河南</h2>
+                <h3 class="partial-title">华夏文明的发祥地</h3>
+                <div class="about-henan-description">
+                    <p>河南省，简称“豫”，中华人民共和国省级行政区，省会郑州，是全国农产品主产区和重要的矿产资源大省、人口大省、重要的综合交通枢纽和人流、物流、信息流中心、全国农业大省和粮食转化加工大省。河南省位于中国中东部、黄河中下游，东接安徽、山东，北接河北、山西，西连陕西，南临湖北，总面积16.57万平方千米。</p>
+                    <p>河南省是中华民族和华夏文明的重要发祥地，是夏、商、周三代文明的核心区，三代文明奠定了中华文明绵延不断发展的基础，在河洛之间凝聚为成熟的文明形态，形成以王都为中心的辐射性统治格局。历史上，先后有20多个朝代200多位帝王在河南建都兴业。河南省地下文物全国第一，地上文物全国第二，是全国文物大省。河南历史代表文化为“中原文化”。</p>
+                </div>
+            </div>
+
+            <div class="henan-scenery">
+                <h2 class="main-title">豫州风光</h2>
+                <div class="henan-scenery-thumbnail"><h4 class="secenry-thumbnail-name">红旗渠</h4></div>
+                <div class="henan-scenery-thumbnail"><h4 class="secenry-thumbnail-name">老君山</h4></div>
+                <div class="henan-scenery-thumbnail"><h4 class="secenry-thumbnail-name">少林寺</h4></div>
+                <div class="henan-scenery-thumbnail"><h4 class="secenry-thumbnail-name">龙门石窟</h4></div>
+            </div>
+
+            <div class="henan-cuisine">
+                <h2 class="main-title">中原美食</h2>
+                <div class="henan-cuisine-block">
+                    <div class="henan-cuisine-photo"><img src="" alt=""></div>
+                    <div class="henan-cuisine-words-block">
+                        <h4 class="cuisine-name"></h4>
+                        <p class="cuisine-description"></p>
+                    </div>
+                </div>
+                <div class="henan-cuisine-block">
+                    <div class="henan-cuisine-photo"><img src="" alt=""></div>
+                    <div class="henan-cuisine-words-block">
+                        <h4 class="cuisine-name"></h4>
+                        <p class="cuisine-description"></p>
+                    </div>
+                </div>
+                <div class="henan-cuisine-block">
+                    <div class="henan-cuisine-photo"><img src="" alt=""></div>
+                    <div class="henan-cuisine-words-block">
+                        <h4 class="cuisine-name"></h4>
+                        <p class="cuisine-description"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <div class="webmaster-profile">
+                <div class="avator"></div>
+                <div class="webmaster-name"></div>
+            </div>
+            <ul class="home-page-navigation">
+                <li class="home-page-navigation-item">
+                    关于河南
+                </li>
+                <li class="home-page-navigation-item">
+                    豫州风光
+                </li>
+                <li class="home-page-navigation-item">
+                    中原美食
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p class="copyright">&copy;2023 Yhs_Jokerの文旅小站 &nbsp; @付耀刚</p>
+        <p class="base">Based on the HTML, CSS, JavaScript</p>
+    </footer>
+</body>
+</html>

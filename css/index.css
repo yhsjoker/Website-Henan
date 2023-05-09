@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 400vh;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/home-page-0.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(103, 172, 222);
+}
+
+.home-wrap{
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 40vh;
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+}
+
+.bulletin-board{
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    font-size: 70px;
+    font-family: '方正舒体';
+    font-weight: bolder;
+    color:rgb(3, 44, 16);
+}
+
+.learn-more-btn{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: 5px solid rgb(3, 44, 16);
+    color: rgb(3, 44, 16);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    font-family: '楷体';
+    margin: 8px 4px;
+    transition-duration: 0.4ms;
+    cursor: pointer;
+    border-radius: 64px;
+}
+
+.learn-more-btn:hover{
+    background-color: rgb(115, 172, 115);
+    color: white;
+}
+
+.point-list{
+    list-style: none;
+    width: 200px;
+    height: 14px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 15px;
+}
+
+.point{
+    backdrop-filter: blur(3px);
+    width: 10px;
+    height: 10px;
+    border: 3px solid green;
+    background-color: aliceblue;
+    border-radius: 100%;
+    float: left;
+}
+
+.point.active{
+    transform: scale(125%);
+    background-color: aquamarine;
+}
+
+.point:nth-child(2){
+    margin:0 75px;
+}
+
+.bg-img-btn{
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 60px;
+    background: none;
+    border: none;
+    color:aliceblue;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#left-btn{
+    position: absolute;
+    left: 0%;
+}
+
+#right-btn{
+    position: absolute;
+    right: 0%;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo{
+    margin-left: 2vw;
+    width: 20vw;
+    line-height: 60px;
+    text-align: center;
+}
+
+.logo > a{
+    text-decoration: none;
+    font-size: 22px;
+    font-family: '楷体';
+    color: rgb(116, 207, 156);
+    font-weight: bolder;
+}
+
+.logo > a > span{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.logo > a:hover{
+    color: aquamarine;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    width: 20vw;
+    height: 60px;
+    align-items: center;
+    margin-left: 3vw;
+    font-size: 16px;
+}
+
+.menu-item{
+    margin-left: 2vw;
+    font-family: '楷体';
+}
+
+.menu-item-home{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.menu-item-scenery{
+    text-decoration: none;
+    color: rgb(3, 44, 16);
+    font-weight: bold;
+}
+
+.menu-item-cuisine{
+    text-decoration: none;
+    color: rgb(3, 44, 16);
+    font-weight: bold;
+}
+
+
+.search-box{
+    margin-top: 15px;
+    margin-left: 20vw;
+    margin-right: 3vw;
+    display: flex;
+    width: 20vw;
+    height: 30px;
+    border: 2px solid rgb(235, 221, 196);
+    border-radius: 5vh;
+}
+
+.search-box input{
+    width: 15vw;
+    height: 20px;
+    border: 0px;
+    outline: none;
+    margin: 0 1vw;
+    background-color: transparent;
+}
+
+.search{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: inherit;
+    height: 30px;
+}
+
+.sign-in{
+    width: 5vw;
+    line-height: 60px;
+    text-align: center;
+}
+
+.sign-in > a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: '方正舒体';
+    color: aliceblue;
+}
+
+.sign-in > a:hover{
+    color: rgb(178, 199, 217);
+}
+
+.sign-up{
+    width: 5vw;
+    line-height: 60px;
+    text-align: center;
+}
+
+.sign-up > a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: '方正舒体';
+    color: aliceblue;
+}
+
+.sign-up > a:hover{
+    color: rgb(178, 199, 217);
+}
+
+.container{
+    
+}
