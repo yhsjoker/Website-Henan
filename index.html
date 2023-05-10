@@ -120,7 +120,10 @@
             timer = setInterval(()=>{
                 time++;
                 if(time == 20){
-                    GoRight();
+                    var top = document.documentElement.scrollTop || document.body.scrollTop;
+                    if(top<100){
+                        GoRight();
+                    }
                     time = 0;
                 }
             }, 300)
