@@ -245,5 +245,121 @@ nav{
 #container{
     height: 300vh;
     width: 100vw;
-    padding-top: 200px;
+    padding-top: 30px;
+    display: flex;
+}
+
+main{
+    width: 80vw;
+    /* border: 1px solid black; */
+    border-right: 1px solid black;
+}
+
+.about-henan{
+    width: 70vw;
+    margin-left: 5vw;
+}
+
+.main-title{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 35px;
+    font-family: '楷体';
+}
+
+.about-henan .main-title{
+    color:deeppink;
+}
+
+.henan-scenery .main-title{
+    color: cadetblue;
+}
+
+.henan-cuisine .main-title{
+    color: darkorchid;
+}
+
+.partial-title{
+    text-align: center;
+    position: relative;
+    left: 7vw;
+    font-size: 15px;
+    font-family: '楷体';
+}
+
+.about-henan-description{
+    margin-top:30px;
+    font-family: '楷体';
+}
+
+.henan-scenery{
+    margin-top: 30px;
+}
+
+.henan-scenery-wrap{
+    justify-content: center;
+    display: flex;
+    margin-top: 40px;
+}
+
+.henan-scenery-thumbnail{
+    width: 175px;
+    height: 175px;
+    border: 1px solid black;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.henan-scenery-thumbnail:nth-child(1){
+    background: url(../images/scenery-thumbnail-1.jpg) no-repeat;
+    background-size: cover;
+    background-color: rgb(103, 172, 222);
+}
+
+.henan-scenery-thumbnail:nth-child(2){
+    background: url(../images/scenery-thumbnail-2.jpg) no-repeat;
+    background-size: cover;
+    background-color: bisque;
+}
+
+.henan-scenery-thumbnail:nth-child(3){
+    background: url(../images/scenery-thumbnail-3.jpg) no-repeat;
+    background-size: cover;
+    background-color: aquamarine;
+}
+
+.henan-scenery-thumbnail:nth-child(4){
+    background: url(../images/scenery-thumbnail-4.jpg) no-repeat;
+    background-size: cover;
+    background-color: blueviolet;
+}
+
+.secenry-thumbnail-name{
+    line-height: 175px;
+    text-align: center;
+}
+
+.secenry-thumbnail-name a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bolder;
+    color: black;
+    display: none;
+}
+
+.henan-scenery-thumbnail:hover{
+    transform: scale(1.25);
+    background-image: none;
+}
+
+.henan-scenery-thumbnail:hover a{
+    display: block;
+}
+
+
+
+
+aside{
+    width: 20vw;
+    /* border: 1px solid black; */
 }
