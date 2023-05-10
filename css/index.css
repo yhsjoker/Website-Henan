@@ -4,7 +4,7 @@
 }
 
 body{
-    height: 400vh;
+
 }
 
 header{
@@ -30,7 +30,7 @@ header{
     height: 90px;
     line-height: 90px;
     text-align: center;
-    font-size: 70px;
+    font-size: 90px;
     font-family: '方正舒体';
     font-weight: bolder;
     color:rgb(3, 44, 16);
@@ -58,7 +58,7 @@ header{
 }
 
 .learn-more-btn:hover{
-    background-color: rgb(115, 172, 115);
+    backdrop-filter: blur(25px);
     color: white;
 }
 
@@ -116,6 +116,7 @@ header{
 
 nav{
     position: fixed;
+    z-index: 9999;
     top: 0;
     height: 60px;
     width: 100vw;
@@ -140,10 +141,6 @@ nav{
 
 .logo > a > span{
     font-family:Arial, Helvetica, sans-serif;
-}
-
-.logo > a:hover{
-    color: aquamarine;
 }
 
 .menu{
@@ -243,7 +240,6 @@ nav{
 }
 
 #container{
-    height: 300vh;
     width: 100vw;
     padding-top: 30px;
     display: flex;
@@ -251,8 +247,8 @@ nav{
 
 main{
     width: 80vw;
-    /* border: 1px solid black; */
-    border-right: 1px solid black;
+    border-right: 3px dashed cadetblue;
+    padding-bottom: 60px;
 }
 
 .about-henan{
@@ -260,11 +256,27 @@ main{
     margin-left: 5vw;
 }
 
-.main-title{
+.main-title-block{
     margin-top: 100px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title{
+    margin: 0 20px;
     text-align: center;
     font-size: 35px;
     font-family: '楷体';
+}
+
+.line{
+    display: inline-block;
+    width: 220px;
+    height: 1px;
+    background: rgba(12, 6, 46, 0.467);
 }
 
 .about-henan .main-title{
@@ -305,8 +317,8 @@ main{
 .henan-scenery-thumbnail{
     width: 175px;
     height: 175px;
-    border: 1px solid black;
-    margin: 30px;
+    /* border: 2px solid black; */
+    margin: 0 30px;
     border-radius: 10px;
 }
 
@@ -348,7 +360,7 @@ main{
 }
 
 .henan-scenery-thumbnail:hover{
-    transform: scale(1.25);
+    transform: rotate(-10deg);
     background-image: none;
 }
 
@@ -356,10 +368,175 @@ main{
     display: block;
 }
 
+.henan-cuisine{
+    margin-top: 30px;
+}
 
+.henan-cuisine-img-wrap{
+    justify-content: center;
+    display: flex;
+    margin-top: 40px;
+}
 
+.henan-cuisine-block{
+    height: 240px;
+    width: 180px;
+    margin: 0 40px;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.62);
+}
+
+.henan-cuisine-block:hover{
+    transform: translateY(-20px);
+}
+
+.henan-cuisine-photo{
+    height: 150px;
+    width: 180px;
+}
+
+.henan-cuisine-photo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.henan-cuisine-words-block{
+    height: 90px;
+    width: 180px;
+}
+
+.cuisine-name{
+    font-size: 16px;
+    margin: 10px;
+    font-family: '楷体';
+    font-weight: bolder;
+}
+
+.cuisine-description{
+    margin:5px;
+    font-family: '楷体';
+    font-size: 14px;
+}
+
+.cuisine-name a{
+    text-decoration: none;
+    color: black;
+}
+
+.cuisine-name a:hover{
+    color: rgb(97, 46, 144);
+}
 
 aside{
+    padding-top: 50px;
     width: 20vw;
-    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+
+.webmaster-profile{
+    height: 200px;
+    position: sticky;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avator{
+    margin-top: 30px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 3px solid black;
+}
+
+.avator:hover{
+    transform: rotate(360deg);
+    transition-duration: 2s;
+}
+
+.avator img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.webmaster-name{
+    margin-top: 20px;
+    color: cornflowerblue;
+}
+
+.home-page-navigation{
+    position: sticky;
+    top: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-page-navigation-item{
+    margin: 15px 0;
+    list-style-type: circle;
+}
+
+.home-page-navigation-item a{
+    text-decoration: none;
+}
+
+.home-page-navigation-item:nth-child(1) a{
+    color: deeppink;
+}
+
+.home-page-navigation-item:nth-child(2) a{
+    color: cadetblue;
+}
+
+.home-page-navigation-item:nth-child(3) a{
+    color: darkorchid;
+}
+
+footer{
+    margin-top: 50px;
+    height: 100px;
+}
+
+.footer-wrap{
+    border-top: 4px dotted blueviolet;
+    margin: 0 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright{
+    margin-top: 20px;
+}
+
+.copyright span:nth-child(1){
+    color: cornflowerblue;
+}
+
+.copyright span:nth-child(2){
+    color: blueviolet;
+}
+
+.copyright span:nth-child(3){
+    color: cornflowerblue;
+}
+
+.base{
+    margin-top: 10px;
+}
+
+.base span:nth-child(1){
+    color: deeppink;
+}
+
+.base span:nth-child(2){
+    color: cadetblue;
+}
+.base span:nth-child(3){
+    color: darkorchid;
 }
