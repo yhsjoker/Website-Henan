@@ -47,6 +47,17 @@
     border-bottom: 2px solid white;
 }
 
+.marija{
+    position: absolute;
+    left: 0px;
+    top: 150px;
+}
+
+.marija img{
+    height: 60vh;
+    width: 75vh;
+}
+
 footer{
     height: 100px;
     width: 100vw;
