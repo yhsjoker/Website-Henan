@@ -135,3 +135,48 @@ nav{
 .sign-up > a:hover{
     color: rgb(178, 199, 217);
 }
+
+
+footer{
+    margin-top: 50px;
+    height: 100px;
+}
+
+.footer-wrap{
+    border-top: 4px dotted blueviolet;
+    margin: 0 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright{
+    margin-top: 20px;
+}
+
+.copyright span:nth-child(1){
+    color: cornflowerblue;
+}
+
+.copyright span:nth-child(2){
+    color: blueviolet;
+}
+
+.copyright span:nth-child(3){
+    color: cornflowerblue;
+}
+
+.base{
+    margin-top: 10px;
+}
+
+.base span:nth-child(1){
+    color: deeppink;
+}
+
+.base span:nth-child(2){
+    color: cadetblue;
+}
+.base span:nth-child(3){
+    color: darkorchid;
+}
