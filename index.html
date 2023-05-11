@@ -136,9 +136,9 @@
         <div class="logo"><a href="#"><span>Yhs_Joker</span>&nbsp;の&nbsp文旅小站</a></div>
         
         <ul  class="menu">
-            <li class="menu-item"><a href="#" class="menu-item-home">首页</a></li>
-            <li class="menu-item"><a href="#" class="menu-item-scenery">豫州风光</a></li>
-            <li class="menu-item"><a href="#" class="menu-item-cuisine">中原美食</a></li>
+            <li class="menu-item"><a href="./index.html" class="menu-item-home">首页</a></li>
+            <li class="menu-item"><a href="./html/henan-scenery.html" class="menu-item-scenery">豫州风光</a></li>
+            <li class="menu-item"><a href="./html/henan-cuisine.html" class="menu-item-cuisine">中原美食</a></li>
         </ul>
 
         <div class="search-box">
@@ -164,14 +164,14 @@
             if(top>100){
                 $('nav').css('background-color', 'white');
                 $('nav').css('border-bottom', '2px solid black');
-                $('.logo a').css('color', 'black');
-                $('.menu-item-home').css('color', 'black');
-                $('.menu-item-scenery').css('color', 'black');
-                $('.menu-item-cuisine').css('color', 'black');
-                $('.sign-in a').css('color', 'black');
-                $('.sign-up a').css('color', 'black');
+                $('.logo a').css('color', 'deepskyblue');
+                $('.menu-item-home').css('color', 'deeppink');
+                $('.menu-item-scenery').css('color', 'cadetblue');
+                $('.menu-item-cuisine').css('color', 'darkorchid');
+                $('.sign-in a').css('color', 'deepskyblue');
+                $('.sign-up a').css('color', 'deeppink');
                 $('.search-box').css('border-color', 'black');
-                $('.sign-up a').css('color', 'black');
+                $('.search-box').css('background-color', 'cornflowerblue');
             }
             else{
                 $('nav').css('background', 'none');
@@ -179,6 +179,7 @@
                 $('.sign-in a').css('color', 'aliceblue');
                 $('.sign-up a').css('color', 'aliceblue');
                 $('.search-box').css('border-color', 'rgb(235, 221, 196)');
+                $('.search-box').css('background', 'none');
                 GoIndex();
             }
         }
@@ -194,8 +195,9 @@
         <main>
             <div class="about-henan">
                 <div class="main-title-block">
+                    <div class="white-block" id="1" style="height:200px"></div>
                     <span class="line"></span>
-                    <h2 class="main-title" id="1">关于河南</h2>
+                    <h2 class="main-title">关于河南</h2>
                     <span class="line"></span>
                 </div>
                 <h3 class="partial-title">——华夏文明的发祥地</h3>
@@ -208,8 +210,9 @@
 
             <div class="henan-scenery">
                 <div class="main-title-block">
+                    <div class="white-block" id="2" style="height:200px"></div>
                     <span class="line"></span>
-                        <h2 class="main-title" id="2">豫州风光</h2>
+                        <h2 class="main-title">豫州风光</h2>
                     <span class="line"></span>
                 </div>
                 <div class="henan-scenery-wrap">
@@ -222,8 +225,9 @@
 
             <div class="henan-cuisine">
                 <div class="main-title-block">
+                    <div class="white-block" id="3" style="height:200px"></div>
                     <span class="line"></span>
-                        <h2 class="main-title" id="3">中原美食</h2>
+                        <h2 class="main-title">中原美食</h2>
                     <span class="line"></span>
                 </div>
                 <div class="henan-cuisine-img-wrap">

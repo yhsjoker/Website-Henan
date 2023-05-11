@@ -3,10 +3,6 @@
     padding: 0;
 }
 
-body{
-
-}
-
 header{
     width: 100vw;
     height: 100vh;
@@ -158,7 +154,12 @@ nav{
     font-family: '楷体';
 }
 
+.menu-item:nth-child(1){
+    transform: rotate(-5deg);
+}
+
 .menu-item-home{
+    font-size: 18px;
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -317,7 +318,6 @@ main{
 .henan-scenery-thumbnail{
     width: 175px;
     height: 175px;
-    /* border: 2px solid black; */
     margin: 0 30px;
     border-radius: 10px;
 }
