@@ -136,6 +136,165 @@ nav{
     color: rgb(178, 199, 217);
 }
 
+#container{
+    width: 100vw;
+    padding-top: 30px;
+    display: flex;
+}
+
+main{
+    width: 80vw;
+    border-right: 3px dashed cadetblue;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cuisine-wrap{
+    width: 840px;
+    height: 400px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(33, 233, 226, 0.113);
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.5);
+}
+
+.cuisine-block{
+    width: 720px;
+    height: 300px;
+    display: flex;
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.5);
+}
+
+.cuisine-img-block{
+    width: 400px;
+    height: 300px;
+}
+
+.cuisine-img-block img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cuisine-words-block{
+    background-color: aquamarine;
+    width: 320px;
+    height: 300px;
+}
+
+.cuisine-name{
+    margin: 15px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(24, 117, 92);
+}
+
+.cuisine-wrap:nth-child(odd) .cuisine-name{
+    text-align: right;
+}
+
+.cuisine-wrap:nth-child(1){
+    background-color: rgba(249, 208, 229, 0.379);
+}
+
+.cuisine-wrap:nth-child(1) .cuisine-words-block{
+    background-color: rgba(238, 139, 192, 0.612);
+}
+
+.cuisine-wrap:nth-child(1) .cuisine-name{
+    border-bottom: 1px solid rgba(238, 78, 164, 0.379);
+    color: deeppink;
+}
+
+.cuisine-wrap:nth-child(2){
+    background-color: rgba(151, 169, 170, 0.315);
+}
+
+.cuisine-wrap:nth-child(2) .cuisine-words-block{
+    background-color: rgb(122, 171, 174);
+}
+
+.cuisine-wrap:nth-child(2) .cuisine-name{
+    border-bottom: 1px solid rgb(27, 92, 96);
+    color: rgb(33, 92, 94);
+}
+
+.cuisine-wrap:nth-child(3){
+    background-color: rgba(200, 138, 231, 0.445);
+}
+
+.cuisine-wrap:nth-child(3) .cuisine-words-block{
+    background-color: rgba(147, 62, 190, 0.561);
+}
+
+.cuisine-wrap:nth-child(3) .cuisine-name{
+    border-bottom: 1px solid rgb(95, 22, 132);
+    color: darkorchid;
+}
+
+.cuisine-wrap:nth-child(4){
+    background-color: rgba(136, 203, 226, 0.542);
+}
+
+.cuisine-wrap:nth-child(4) .cuisine-words-block{
+    background-color: rgba(31, 157, 199, 0.591);
+}
+
+.cuisine-wrap:nth-child(4) .cuisine-name{
+    border-bottom: 1px solid rgb(12, 90, 116);
+    color: rgb(0, 85, 114);
+}
+
+.cuisine-description{
+    font-size: 14px;
+    margin: 10px;
+    font-family: '楷体';
+}
+
+aside{
+    padding-top: 50px;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cuisine-navigation{
+    position: sticky;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cuisine-navigation-item{
+    margin: 24px 0;
+    list-style-type: circle;
+    
+}
+
+.cuisine-navigation-item a{
+    text-decoration: none;
+}
+
+.cuisine-navigation-item:nth-child(1) a{
+    color: deeppink;
+}
+
+.cuisine-navigation-item:nth-child(2) a{
+    color: cadetblue;
+}
+
+.cuisine-navigation-item:nth-child(3) a{
+    color: darkorchid;
+}
+
+.cuisine-navigation-item:nth-child(4) a{
+    color: deepskyblue;
+}
 
 footer{
     margin-top: 50px;
