@@ -207,6 +207,7 @@ main{
 
 .scenery-wrap:nth-child(1) .scenery-name{
     border-bottom: 1px solid rgba(238, 78, 164, 0.379);
+    color: deeppink;
 }
 
 .scenery-wrap:nth-child(2){
@@ -219,6 +220,7 @@ main{
 
 .scenery-wrap:nth-child(2) .scenery-name{
     border-bottom: 1px solid rgb(27, 92, 96);
+    color: rgb(33, 92, 94);
 }
 
 .scenery-wrap:nth-child(3){
@@ -231,6 +233,7 @@ main{
 
 .scenery-wrap:nth-child(3) .scenery-name{
     border-bottom: 1px solid rgb(95, 22, 132);
+    color: darkorchid;
 }
 
 .scenery-wrap:nth-child(4){
@@ -243,6 +246,7 @@ main{
 
 .scenery-wrap:nth-child(4) .scenery-name{
     border-bottom: 1px solid rgb(12, 90, 116);
+    color: rgb(0, 85, 114);
 }
 
 .scenery-description{

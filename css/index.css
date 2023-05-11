@@ -325,25 +325,25 @@ main{
 .henan-scenery-thumbnail:nth-child(1){
     background: url(../images/scenery-thumbnail-1.jpg) no-repeat;
     background-size: cover;
-    background-color: rgb(103, 172, 222);
+    background-color: deeppink;
 }
 
 .henan-scenery-thumbnail:nth-child(2){
     background: url(../images/scenery-thumbnail-2.jpg) no-repeat;
     background-size: cover;
-    background-color: bisque;
+    background-color: cadetblue;
 }
 
 .henan-scenery-thumbnail:nth-child(3){
     background: url(../images/scenery-thumbnail-3.jpg) no-repeat;
     background-size: cover;
-    background-color: aquamarine;
+    background-color: darkorchid;
 }
 
 .henan-scenery-thumbnail:nth-child(4){
     background: url(../images/scenery-thumbnail-4.jpg) no-repeat;
     background-size: cover;
-    background-color: blueviolet;
+    background-color: deepskyblue;
 }
 
 .secenry-thumbnail-name{
