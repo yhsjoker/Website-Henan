@@ -45,10 +45,9 @@
                 var dom = document.querySelector(el);
 
                 if (1 < arg.length) {
-                    //设置行内style样式
                     dom.style[arg[0]] = arg[1];
-                } else {
-                    //获取非行内style样式
+                }
+                else {
                     return dom.currentStyle ? dom.currentStyle[arg[0]] : getComputedStyle(dom, null)[arg[0]];
                 };
             };
@@ -67,7 +66,7 @@
         var GoIndex = function(){
             ClearActive();
             points[index].className = "point active";
-            $('header').css('background-image', 'url(../images/home-page-' + index + '.jpg)');
+            $('header').css('background-image', 'url(../images/home-page/home-page-' + index + '.jpg)');
             $('.bulletin-board').css('color', colors[index]);
             $('.learn-more-btn').css('border', "5px solid " + colors[index]);
             $('.learn-more-btn').css('color', colors[index]);
@@ -233,21 +232,21 @@
                 </div>
                 <div class="henan-cuisine-img-wrap">
                     <div class="henan-cuisine-block">
-                        <div class="henan-cuisine-photo"><img src="./images/cuisine-thumbnail-1.jpg" alt="胡辣汤"></div>
+                        <div class="henan-cuisine-photo"><img src="./images/home-page/cuisine-thumbnail-1.jpg" alt="胡辣汤"></div>
                         <div class="henan-cuisine-words-block">
                             <h4 class="cuisine-name"><a href="./html/henan-cuisine.html#1">胡辣汤</a></h4>
                             <p class="cuisine-description">&nbsp;&nbsp;汤味浓郁、汤色靓丽、汤汁粘稠，香辣可口</p>
                         </div>
                     </div>
                     <div class="henan-cuisine-block">
-                        <div class="henan-cuisine-photo"><img src="./images/cuisine-thumbnail-2.jpg" alt="河南烩面"></div>
+                        <div class="henan-cuisine-photo"><img src="./images/home-page/cuisine-thumbnail-2.jpg" alt="河南烩面"></div>
                         <div class="henan-cuisine-words-block">
                             <h4 class="cuisine-name"><a href="./html/henan-cuisine.html#2">河南烩面</a></h4>
                             <p class="cuisine-description">&nbsp;&nbsp;“中国十大面条”之一</p>
                         </div>
                     </div>
                     <div class="henan-cuisine-block">
-                        <div class="henan-cuisine-photo"><img src="./images/cuisine-thumbnail-3.jpg" alt="开封小笼灌汤包"></div>
+                        <div class="henan-cuisine-photo"><img src="./images/home-page/cuisine-thumbnail-3.jpg" alt="开封小笼灌汤包"></div>
                         <div class="henan-cuisine-words-block">
                             <h4 class="cuisine-name"><a href="./html/henan-cuisine.html#3">开封小笼灌汤包</a></h4>
                             <p class="cuisine-description">&nbsp;&nbsp;“先开窗，后喝汤，再满口香”</p>
@@ -259,7 +258,7 @@
 
         <aside>
             <div class="webmaster-profile">
-                <div class="avator"><img src="./images/avator.jpg" alt=""></div>
+                <div class="avator"><img src="./images/home-page/avator.jpg" alt=""></div>
                 <div class="webmaster-name">Yhs_Joker</div>
             </div>
             <ul class="home-page-navigation">
