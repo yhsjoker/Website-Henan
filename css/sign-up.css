@@ -49,13 +49,14 @@
 
 .marija{
     position: absolute;
-    left: 0px;
-    top: 150px;
+    left: 10%;
+    top: 25%;
+    z-index: 0;
 }
 
 .marija img{
-    height: 60vh;
-    width: 75vh;
+    height: 50vh;
+    width: 50vh;
 }
 
 footer{
