@@ -6,7 +6,7 @@
 header{
     width: 100vw;
     height: 100vh;
-    background-image: url(../images/home-page/home-page-0.jpg);
+    background-image: url(/images/home-page/home-page-0.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
@@ -323,25 +323,25 @@ main{
 }
 
 .henan-scenery-thumbnail:nth-child(1){
-    background: url(../images/home-page/scenery-thumbnail-1.jpg) no-repeat;
+    background: url(/images/home-page/scenery-thumbnail-1.jpg) no-repeat;
     background-size: cover;
     background-color: deeppink;
 }
 
 .henan-scenery-thumbnail:nth-child(2){
-    background: url(../images/home-page/scenery-thumbnail-2.jpg) no-repeat;
+    background: url(/images/home-page/scenery-thumbnail-2.jpg) no-repeat;
     background-size: cover;
     background-color: cadetblue;
 }
 
 .henan-scenery-thumbnail:nth-child(3){
-    background: url(../images/home-page/scenery-thumbnail-3.jpg) no-repeat;
+    background: url(/images/home-page/scenery-thumbnail-3.jpg) no-repeat;
     background-size: cover;
     background-color: darkorchid;
 }
 
 .henan-scenery-thumbnail:nth-child(4){
-    background: url(../images/home-page/scenery-thumbnail-4.jpg) no-repeat;
+    background: url(/images/home-page/scenery-thumbnail-4.jpg) no-repeat;
     background-size: cover;
     background-color: deepskyblue;
 }
