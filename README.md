@@ -2,4 +2,7 @@
 
 完结撒花~
 
-浏览网址：https://web-yhsjoker.netlify.app/index.html
+Github: https://github.com/yhsjoker/Website-Henan
+浏览：https://web-yhsjoker.netlify.app/
+
+Author: Yhs_Joker
